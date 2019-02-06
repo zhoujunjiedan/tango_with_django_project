@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Rango</title>
-    </head>
+ {% extends 'rango/base.html' %}
 
-    <body>
+
+    {% block title_block %} 
+        Rango
+         {% endblock %}
+
+    {% block body_block %}
         <h1>Rango says...</h1>
+        <p>You have visited this webpage: {{visits}} times</p>
         <div>
             <img src="{{ MEDIA_URL}}cat.jpg"/>
         </div>
-    </body>
-</html>
+   {% endblock %}
