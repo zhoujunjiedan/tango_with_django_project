@@ -23,13 +23,13 @@ hello there partner!
                   <li><a href="{% url 'register' %}">Sign Up</a></li>
                   {% endif %}
                   <li><a href="{% url 'about' %}">About</a></li>
-                  <li><a href="{% url 'index' %}">index</a></li>
+                  <li><a href="{% url 'index' %}">Index</a></li>
                   </ul>
                   </div> 
 
         <div>
         <h2>Most Liked Categories</h2>
-        <p>You have visited this webpage: {{visits}} times</p>
+        <h3><p>visits: {{ visits }}</p ></h3>
 		    <p>
         {% if categories %}
         <ul>
