@@ -12,7 +12,20 @@ hello {{ user.username }}!
 {% else %}
 hello there partner!
 {% endif %}
-
+<div> 
+              <ul>
+                  {% if user.is_authenticated %}
+                  <li><a href="{% url 'restricted' %}">Restricted Page</a></li>
+                  <li><a href="{% url 'logout' %}">Logout</a></li>
+                  <li><a href="{% url 'add_category' %}">Add a New Category</a></li>
+                  {% else %}
+                  <li><a href="{% url 'login' %}">Sign In</a></li>
+                  <li><a href="{% url 'register' %}">Sign Up</a></li>
+                  {% endif %}
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'index' %}">index</a></li>
+                  </ul>
+                  </div> 
 
         <div>
         <h2>Most Liked Categories</h2>
@@ -48,7 +61,10 @@ hello there partner!
 		</div>
 
         <div>
+           
+      {% if user.is_authenticated %}
             <p><a href="/rango/add_category/">Add a New Category</a></p>
+            {% endif %}
             {% comment %} <a href="/rango/about/">About Rango</a><br /> {% endcomment %}
             <a href="{% url 'about' %}">About</a>
             <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
