@@ -25,14 +25,15 @@ def about(request):
     context_dict={}
     visitor_cookie_handler(request)
     context_dict['visits'] = request.session['visits']
-    '''if request.session.test_cookie_worked():
+    if request.session.test_cookie_worked():
         print("TEST COOKIE WORKED!")
         request.session.delete_test_cookie()
     # prints out whether the method is a GET or a POST 
         print(request.method)
     #  # prints out the user name, if no one is logged in it prints `AnonymousUser` 
-        print(request.user)'''
-    return render(request, 'rango/about.html',context=context_dict)
+        print(request.user)
+        
+    return render(request, 'rango/about.html',context=context_dict,)
 
 
 def show_category(request, category_name_slug):
