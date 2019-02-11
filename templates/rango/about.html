@@ -1,5 +1,5 @@
  {% extends 'rango/base.html' %}
-
+{% load staticfiles %}
 
     {% block title_block %} 
         Rango
@@ -8,8 +8,7 @@
     {% block body_block %}
         <h1>Rango says...</h1>
         <p>You have visited this webpage: {{visits}} times</p>
-        <p><a href="{% url 'index' %}">index</a></p>
         <div>
-            <img src="{{ MEDIA_URL}}cat.jpg"/>
+           <img src="{% static "images/cat.jpg" %}" alt="Picture of cat" />
         </div>
    {% endblock %}
