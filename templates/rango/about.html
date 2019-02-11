@@ -2,14 +2,14 @@
 {% load staticfiles %}
 
     {% block title_block %} 
-        Rango
+        rango says here is the about page
          {% endblock %}
 
     {% block body_block %}
-        <h1>Rango says...</h1>
+        <h1>rango says here is the about page</h1>
         <p>You have visited this webpage: {{visits}} times</p>
-        <p><a href="{% url 'index' %}">index</a></p>
+        <p><a href="{% url 'index' %}">Index</a></p>
         <div>
-            <img src="{% static "images/cat.jpg" %}" alt="Picture of Rango" />
+            <img src="/static/images/cat.jpg" />
         </div>
    {% endblock %}
