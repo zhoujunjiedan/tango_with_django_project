@@ -65,6 +65,7 @@ hello there partner!
       {% if user.is_authenticated %}
             <p><a href="/rango/add_category/">Add a New Category</a></p>
             {% endif %}
+            <h3><p>visits: {{ visits }}</p ></h3>
             {% comment %} <a href="/rango/about/">About Rango</a><br /> {% endcomment %}
             <a href="{% url 'about' %}">About</a>
             <img src="{% static "images/rango.jpg" %}" alt="Picture of Rango" />
