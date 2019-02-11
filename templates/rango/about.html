@@ -1,23 +1,16 @@
 {% extends 'rango/base.html' %}
 {% load staticfiles %}
 
-{% block title_block %}
-	About
+{% block title_block%}
+    Rango says here is the about page
 {% endblock %}
 
-
-{% block body_block %}
-		<h1>About page says...</h1>
-		<div>
-			hey there partner! <br />
-			<strong>{{ aboutme }}</strong><br />
-
-		</div>
-		<div>
-			<p>visits: {{ visits }}</p>
-			<h1>Rango says here is the about page.</h1><br>
-			<img src="{{ MEDIA_URL}}cat.jpg" />
-			<img src="{% static "images/about.jpg" %}" alt="About Pic" />
-
-		</div>
+{% block body_block%}
+    <h1>Rango says here is the about page</h1>
+    <h3><p>visits: {{ visits }}</p ></h3>
+    <img src="{{MEDIA_URL}}cat.jpg" />
+    <div>
+        <img src="/static/images/cat.jpg" alt="Picture of cat" />
+        <img src="/media/cat.jpg" />
+    </div>
 {% endblock %}
